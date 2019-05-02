@@ -12,6 +12,7 @@ public class ConvertToPayload {
         loanResponse.setIpAddress(loan.getIpAddress());
         loanResponse.setLoanTill(loan.getLoanTill());
         loanResponse.setLoanExtendedTill(loan.getLoanExtendedTill());
+        loanResponse.setNeedsRiskAnalysis(loan.isNeedsRiskAnalysis());
         return loanResponse;
     }
 }

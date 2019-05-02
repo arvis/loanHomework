@@ -1,7 +1,6 @@
 package io.fourfinanceit.homework.controller;
 
 import io.fourfinanceit.homework.exception.LoanNotFoundException;
-import io.fourfinanceit.homework.model.Loan;
 import io.fourfinanceit.homework.payload.ApplyLoanRequest;
 import io.fourfinanceit.homework.payload.ExtendLoanRequest;
 import io.fourfinanceit.homework.payload.LoanResponse;
@@ -18,12 +17,6 @@ public class MainController {
 
     @Autowired
     private LoanService loanService;
-
-
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
 
     @PostMapping("/apply")
     @ResponseStatus(HttpStatus.CREATED)

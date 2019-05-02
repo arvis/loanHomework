@@ -8,8 +8,6 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -25,7 +23,7 @@ public class Loan {
     @Size(max = 32)
     private String userId;
 
-    @Column(precision=10, scale=2)
+    @Column(precision = 10, scale = 2)
     @DecimalMin("5.00")
     @DecimalMax("50000000.00")
     private BigDecimal amount;
@@ -41,17 +39,12 @@ public class Loan {
     @CreatedDate
     @Column(nullable = false, updatable = false)
     private LocalDateTime loanAssigned;
-//    private Date loanAssigned;
 
     @Column
     private Date loanTill;
 
     @Column
     private Date loanExtendedTill;
-
-//    @CreatedDate
-//    @Column(nullable = false, updatable = false)
-//    private Instant createdAt;
 
     public Long getId() {
         return id;

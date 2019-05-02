@@ -1,6 +1,5 @@
 package io.fourfinanceit.homework.payload;
 
-import java.time.Instant;
 import java.util.Date;
 
 public class ExtendLoanRequest {

@@ -1,7 +1,6 @@
 package io.fourfinanceit.homework.payload;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.Date;
 
 public class LoanResponse {
@@ -12,6 +11,7 @@ public class LoanResponse {
     private String ipAddress;
     private Date loanTill;
     private Date loanExtendedTill;
+    private boolean needsRiskAnalysis;
 
     public Long getId() {
         return id;
@@ -59,5 +59,13 @@ public class LoanResponse {
 
     public void setLoanExtendedTill(Date loanExtendedTill) {
         this.loanExtendedTill = loanExtendedTill;
+    }
+
+    public boolean isNeedsRiskAnalysis() {
+        return needsRiskAnalysis;
+    }
+
+    public void setNeedsRiskAnalysis(boolean needsRiskAnalysis) {
+        this.needsRiskAnalysis = needsRiskAnalysis;
     }
 }
